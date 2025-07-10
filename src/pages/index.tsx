@@ -1,4 +1,4 @@
-import { CirclePlus, StickyNote } from "lucide-react";
+import { CirclePlus } from "lucide-react";
 import { Link } from "react-router";
 
 export default function IndexPage() {
