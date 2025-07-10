@@ -13,7 +13,7 @@ export const getAllPosts = async ({
   const to = page * limit - 1;
   let post = supabase
     .from("posts")
-    .select("*", { count: "exact" })
+    .select("*", { count: "exact" }).order('created_at', {ascending: false})
     .range(from, to);
 
   if (!!search) post = post.textSearch("from", search);
